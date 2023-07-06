@@ -1,0 +1,303 @@
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'montserrat',sans-serif;
+}
+
+a{
+    text-decoration-line: none;
+}
+.container{
+    min-height: 100vh;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+/*----hero section-----*/
+#hero{
+    background-image:url(./favicon/table-work-computer-study-reading.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%; 
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
+}
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 1s ease forwards;
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+#hero h1:nth-child(3){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+}
+#hero h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease ;
+    transition-property: background-color,color;
+}
+#hero .cta:hover{
+    color:white;
+    background-color: crimson;
+}
+
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+
+@keyframes text_reveal_name{
+    100%{
+        color:blue;
+        font-weight: 500px;
+    }
+}
+
+/* --certificates--*/
+
+#certificates{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.certi-heading {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.certi-heading h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+.certi-heading h1 span{
+    color: red;
+}
+
+.certi-frame img{
+    width: 30vw;
+}
+
+.certi-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 30vh;
+    max-width: 100%;
+}
+
+/* ---skill section---- */
+.skills{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* background-image: linear-gradient(79deg,#7439db,#c66fbc 48%,#f7944d); */
+    
+    
+}
+
+.skill_section{
+    min-height: 80vh;
+    padding-top: 10px;
+
+}
+
+.skill_heading{
+    margin: 15px;
+}
+
+.skill_heading h1{
+    padding-top: .5vh;
+    text-align: center;
+    font-size: 50px;
+}
+
+.skill_heading h1 span{
+    color: red ;
+}
+
+.skills .python{
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 15px;
+    text-align: center;
+}
+
+.skills .python h1{
+    font-size: 25px;
+}
+
+
+.about #detail{
+    width: 50vw;
+    padding: 18px;
+}
+
+.about #detail h1{
+    font-size: 25px;
+}
+
+.about #detail p{
+    font-size: 20px;
+}
+
+.about #detail .resume{
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease ;
+    
+}
+#image{
+    border: 5px solid black;
+    border-radius: 5px;
+    background-origin: padding-box;
+}
+
+#image img{
+    width: 30vw;
+    height: 90vh;
+}
+
+#random{
+    display: flex;
+}
+
+
+.contact h1{
+    padding-top: 30vh;
+    font-size: 30px;
+    text-align: center;
+}
+
+.contact span{
+    color: red;
+}
+
+#contact-all{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contact-all #phone{
+margin-top: 40px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#contact-all #phone a{
+    font-size: 15px;
+    padding: 30px;
+    padding-left: 130px;
+    color:red;
+
+}
+
+#contact-all #phone a img{
+    text-align: center;
+}
+
+#conract-all #phone a .call{
+    color: blue;
+}
+
+
+
+@media only screen and (max-width:420px) {
+    .certi-container{
+        flex-direction:column;
+        /* flex-wrap: nowrap; */
+
+    }
+    .certi-frame{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .certi-frame img{
+        width: 100%;
+    }
+}
